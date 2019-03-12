@@ -1,0 +1,13 @@
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EPaymentsConsoleTest.exe.config
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EPaymentsConsoleTest.exe
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EPaymentsConsoleTest.pdb
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EntityFramework.dll
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EntityFramework.xml
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\obj\Debug\EPaymentsConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\obj\Debug\EPaymentsConsoleTest.csproj.CopyComplete
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\obj\Debug\EPaymentsConsoleTest.exe
+C:\Users\kater\source\repos\EPayments\EPaymentsConsoleTest\obj\Debug\EPaymentsConsoleTest.pdb

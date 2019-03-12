@@ -1,0 +1,74 @@
+﻿@using EPayments.Helpers
+
+@{
+    ViewBag.Title = "Мониторинг сайтов";
+
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "tableBody",
+        Url = Url.Action("GetSites"),
+        LoadingElementDuration = 1000,
+        LoadingElementId = "loading"
+    };
+
+}
+
+<div id="loading" class="load" style="display:none">
+    <p>Загрузка данных...</p>
+</div>
+
+<p>Страница обновляется автоматически. Период - @ViewBag.PeriodMin мин. </p>
+
+
+@if (Request.IsAuthenticated)
+{
+    <div>
+        @Html.ActionLink("Создать новый", "Create")
+    </div>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                Наименование
+            </th>
+            <th>
+                URL
+            </th>
+            @if (Html.IsDebug())
+            {
+                <th>
+                    Состояние (количество успешных подклчений)
+                </th>
+            }
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @Html.Action("GetSites")
+    </tbody>
+
+</table>
+
+
+@if (Html.IsDebug())
+{
+    using (Ajax.BeginForm(ajaxOptions))
+    {
+        <div>
+            <button type="submit">Обновить</button>
+        </div>
+    }
+}
+
+
+<script type="text/javascript">
+
+    $(function () {
+        setInterval(function () { $('#tableBody').load('/Site/GetSites'); }, @ViewBag.Period); // every 3 sec
+    });
+
+</script>

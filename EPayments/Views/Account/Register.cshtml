@@ -1,0 +1,41 @@
+﻿@model EPayments.Models.RegisterModel
+ 
+@{
+    ViewBag.Title = "Register";
+}
+ 
+<h2>Регистрация</h2>
+ 
+ 
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+     
+<div>
+    <h4>Регистрация пользователя</h4>
+    <hr />
+    @Html.ValidationSummary(false)
+
+    <p>
+        @Html.LabelFor(x => x.Email)
+        @Html.EditorFor(model => model.Email)
+    </p>
+       
+    <p>
+        @Html.LabelFor(x => x.Password)  
+        @Html.EditorFor(model => model.Password)   
+    </p>
+
+    <p>
+        @Html.LabelFor(x => x.PasswordConfirm)  
+        @Html.EditorFor(model => model.PasswordConfirm)     
+    </p>
+
+        <div>
+            <div>
+                <input type="submit" value="Зарегистрировать" />
+            </div>
+        </div>
+</div>
+}
+

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EPayments.Models.Site>
+@using EPayments.Helpers
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @if (item.Status != 0)
+            {
+                <img src='@Url.Content("~/Images/yes1.ico")' />
+            }
+            else
+            {
+                <img src='@Url.Content("~/Images/no1.ico")' />
+            }
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URL)
+        </td>
+        @if (Html.IsDebug())
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        }
+        <td>
+            @if (Request.IsAuthenticated)
+            {
+                @Html.ActionLink("Изменить", "Edit", new { id = item.Id })
+            }
+        </td>
+    </tr>
+}
+
+
+
